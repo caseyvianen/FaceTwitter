@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta property="fb:app_id" content="1530553083885616" />
+<meta property="og:type"   content="sharing_tests:quiz" />
+<meta property="og:url"    content="http://fbtests.rasec.ninja/index.php" />
+<meta property="og:title"  content="Titulo" />
+<meta id="og-img" property="og:image"  content="http://konachan.com/image/245df9c7a4e82ee2c296e36d2e18b8dc/Konachan.com%20-%20188946%20black_hair%20building%20hatsune_miku%20headdress%20long_hair%20nou%20red_eyes%20staff%20twintails%20vocaloid.jpg" />
+
+</head>
+
+<body ng-app="Appshare">
+
+    <h1>Twitter Facebook Sharing</h1>
+    <div ng-controller="mainCtrl">
+        <div class="FbShare">
+            <a ng-click="shareFacebook()">Delen op Facebook</a> 
+        </div>
+        <div class="TwitterShare">
+            <a href="https://twitter.com/share" ng-click="shareTwitter()" class="twitter-share-button" data-url="http://localhost:8080" data-size="large">Tweet</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/service.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+      <script type="text/javascript" src="rawcode/initfacebook.js"></script>
+
+
+
+</body>
+
+</html>
