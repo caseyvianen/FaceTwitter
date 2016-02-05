@@ -1,17 +1,36 @@
 angular.module("Appshare")
-.service('Delen',function ()
+
+.service('Share',function ()
   {
-    this.deelTwitter = function()
+
+    this.deelTwitter = function(t)
+    {
+      twttr.widgets.createShareButton(
+      'http://www.iamprogrez.com/products/iam-it/',
+      document.getElementById('container'),
+      {
+        text: t,
+        hashtags:"iamprogrez,iam-it",
+      });
+        twttr.events.bind('tweet', function (event)
+        {
+            console.log('Gelukt');
+        }
+      ) ;
+
+
+   }
+
+    this.deelFacebook = function(d,p)
     {
 
-    }
-
-    this.deelFacebook = function()
-    {
        FB.ui(
         {
-          method: 'share',
-          href: 'https://google.com',
+          method: 'feed',
+          link:'http://www.iamprogrez.com/products/iam-it/',
+          description:d,
+          picture:p,
+
         },
         function(response)
         {

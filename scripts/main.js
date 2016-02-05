@@ -1,13 +1,19 @@
 angular.module("Appshare")
-.controller('mainCtrl',function($scope,Delen){
+.controller('mainCtrl',function($scope,Share){
   $scope.shareFacebook = function()
   {
-    Delen.deelFacebook();
+    Share.deelFacebook($scope.description,$scope.image);
   }
-  $scope.shareTwitter= function()
+  shareTwitter= function()
   {
-    Delen.deelTwitter();
+    Share.deelTwitter($scope.text);
+  }
+  tweeted= function()
+  {
+    Share.checkTweeted();
   }
 
-
+  $scope.text= "CONFIRMED BY IGN";
+  $scope.description = "Hallo";
+  $scope.image="http://www.w3schools.com/images/w3schools_green.jpg";
 });
